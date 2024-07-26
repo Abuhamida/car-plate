@@ -39,7 +39,7 @@ export default function Home() {
             transition={{ duration: 1, delay: 1 }}
             className="bg-[#722d23] px-6 py-3 rounded-full text-3xl text-white hover:bg-white hover:text-[#722d23] cursor-pointer transition-colors duration-700 ease-in-out"
           >
-            <Link href={"/"}>let's try</Link>
+            <Link href={"/"}>let&apos;s try</Link>
           </motion.div>
         </div>
       </motion.div>
@@ -67,7 +67,7 @@ export default function Home() {
                   Effortless Car Plate Recognition:{" "}
                 </span>
                 Simply upload an image, and let our sophisticated OCR system do
-                the rest. Within moments, you'll have the car plate number at
+                the rest. Within moments, you&apos;ll have the car plate number at
                 your fingertips.
               </motion.li>
               <motion.li
@@ -81,7 +81,7 @@ export default function Home() {
                 </span>{" "}
                 Our technology is ideal for enhancing security in various
                 applications, from gated communities to corporate parking lots.
-                Know who's coming and going with precision.
+                Know who&apos;s coming and going with precision.
               </motion.li>
               <motion.li
                 initial={{ opacity: 0, x: -200 }}
