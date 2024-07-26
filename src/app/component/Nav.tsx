@@ -15,10 +15,11 @@ export default function Nav() {
 
   return (
     <div className="flex flex-col justify-center items-center lg:px-24 py-2 min-h-24 border-b-2 border-black w-full px-10 fixed top-0 text-black bg-white z-50">
-      <motion.div className="absolute top-7 md:left-20 left-2"
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 1 }}
-      transition={{ duration: 0.5, ease: "linear" }}
+      <motion.div
+        className="absolute top-7 md:left-20 left-2"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 1 }}
+        transition={{ duration: 0.5, ease: "linear" }}
       >
         <Link href="/">
           <Image
@@ -86,8 +87,15 @@ export default function Nav() {
           {navItems.map((item, index) => (
             <motion.li
               initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 1 }}
-              transition={{ duration: 0.5, delay: 0.3 * index, ease: "linear" }}
+              animate={{
+                opacity: 1,
+                y: 1,
+                transition: {
+                  duration: 0.5,
+                  delay: 0.3 * index,
+                  ease: "linear",
+                },
+              }}
               whileHover={{
                 scale: 1.2,
                 transition: {

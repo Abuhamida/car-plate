@@ -44,7 +44,7 @@ export default function Home() {
           </motion.div>
         </div>
       </motion.div>
-      <div className="flex flex-col items-start justify-center w-full px-24 py-10 gap-5">
+      <div className="flex flex-col items-start justify-center w-full px-20 py-10 gap-5">
         <h1 className="text-4xl font-sans font-semibold">
           What we do <span className="text-[#722d23] font-bold">VELOX</span>
         </h1>
@@ -57,7 +57,7 @@ export default function Home() {
           </p>
 
           <div className=" relative">
-            <motion.ul className="pt-2 pl-4  flex flex-col justify-center items-start gap-3 leading-8 w-3/5">
+            <motion.ul className="pt-2 pl-6  flex flex-col justify-center items-start gap-3 leading-8 w-3/5">
               <motion.li
                 initial={{ opacity: 0, x: -200 }}
                 whileInView={{ opacity: 1, x: 1 }}

@@ -76,10 +76,15 @@ export default function Work() {
           </div>
         ))}
 
-        <div className="flex text-3xl pt-4 gap-2">
+        <motion.div
+        initial={{ opacity: 0, y: 200 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.6, ease: "linear" }}
+        className="flex text-3xl pt-4 gap-2">
             <h1>You can try by upload car image  </h1>
             <Link href={'/plate'} className="text-[#86311f] hover:text-[#d72622] transition-colors duration-500 ease-out"> Now</Link>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
