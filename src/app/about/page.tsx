@@ -19,8 +19,8 @@ export default function page() {
       role: "Backend Developer",
       image: "/images/ahmed.png",
       linkedin: "https://www.linkedin.com/in/ahmed-elsayed-0b3a9a1b3/",
-      github: "",
-      Facebook: "https://github.com/a4hmed4",
+      github: "https://github.com/a4hmed4",
+      Facebook: "",
     },
     {
       name: "Rowyda ElShaer",
@@ -34,7 +34,7 @@ export default function page() {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-24 gap-10 ">
       <motion.div
-        className=" absolute -z-10 top-32 h-[500px] bg-cover w-1/2 right-2 bg-center bg-no-repeat flex flex-col items-start justify-center px-20"
+        className=" absolute -z-10 top-44 lg:top-32 h-[200px] md:top-36 md:h-[350px] w-2/3 lg:h-[500px] bg-cover lg:w-1/2 right-0 lg:right-2 bg-center bg-no-repeat flex flex-col items-start justify-center px-20"
         style={{
           backgroundImage: "url('/images/what-is-anpr.png')",
         }}
@@ -48,12 +48,12 @@ export default function page() {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.3, ease: "linear" }}
-        className=" px-20 py-10 flex flex-col justify-center items-start gap-5"
+        className="px-4 lg:px-20 lg:py-10 flex flex-col justify-center items-start gap-5"
       >
         <h1 className="text-4xl font-sans font-bold ">
           About <span className="text-[#88321e]"> VELOX</span>
         </h1>
-        <p className="w-3/5 text-xl leading-7 pl-4">
+        <p className="w-full lg:w-3/5 text-xl leading-7 pl-2 lg:pl-4">
           Welcome to Velox! We're at the forefront of innovation, offering
           state-of-the-art solutions for car plate number recognition and
           vehicle data management. Our advanced OCR technology ensures seamless
@@ -67,10 +67,10 @@ export default function page() {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.6, ease: "linear" }}
-        className=" px-20 py-5 flex flex-col justify-center items-start gap-5"
+        className="px-4 lg:px-20 py-5 flex flex-col justify-center items-start gap-5"
       >
         <h1 className="text-4xl font-sans font-bold ">Our Mission</h1>
-        <p className="w-3/5 text-xl leading-7 pl-4">
+        <p className="w-full lg:w-3/5 text-xl leading-7 pl-2 lg:pl-4">
           At VELOX, our mission is clear: to revolutionize vehicle data
           management. We leverage cutting-edge OCR technology to deliver
           reliable and efficient car plate number detection and comprehensive
@@ -80,13 +80,26 @@ export default function page() {
           world.
         </p>
       </motion.div>
-      <div className=" px-20 py-10 flex flex-col justify-center items-start gap-5 w-full">
+      <div className=" px-2 lg:px-20 py-10 flex flex-col justify-center items-start gap-5 w-full">
         <h1 className="text-4xl font-sans font-bold ">Our Team</h1>
         <div className="w-full min-h-[300px]">
           <Swiper
             spaceBetween={50}
-            slidesPerView={3}
-            className=" w-[1200px] black overflow-hidden min-h-[300px]"
+            slidesPerView={1}
+            grabCursor={true}
+            // centeredSlides={true}
+            loop={true}
+            breakpoints={{
+              640: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              },
+              1024: {
+                slidesPerView:3,
+                spaceBetween: 50,
+              },
+            }}
+            className=" w-[300px] md:w-[400px] lg:w-[1200px] black overflow-hidden min-h-[300px]"
           >
             {team.map((member, index) => (
               <SwiperSlide key={index}>
@@ -109,7 +122,7 @@ export default function page() {
                     className="w-40 h-40 rounded-full"
                     alt={member.name}
                   />
-                  <h1 className="text-3xl font-sans font-bold">
+                  <h1 className="text-2xl lg:text-3xl font-sans font-bold">
                     {member.name}
                   </h1>
                   <p className="text-xl font-sans font-semibold">
@@ -149,13 +162,13 @@ export default function page() {
       initial={{ opacity: 0, y: 200 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: 0.6, ease: "linear" }}
-      className=" px-20 py-10 flex flex-col justify-center items-center gap-5 w-full">
+      transition={{ duration: 0.5, delay: 0.2, ease: "linear" }}
+      className="px-4 lg:px-20 lg:py-10 flex flex-col justify-center items-center gap-5 w-full">
         <h1 className="text-4xl font-sans font-bold ">Get in Touch</h1>
-        <p className="w-5/6 text-xl leading-7 pl-4 text-center">
+        <p className="w-full lg:w-5/6 text-xl leading-7 lg:pl-4 text-center">
           We'd love to hear from you! Whether you have questions, feedback, or
           need support, our dedicated team is here to assist. Reach out to us at
-          <a href="support@carplatescanner.com" className="text-blue-700"> support@carplatescanner.com  </a>
+          <Link href="mailto:support@carplatescanner.com" className="text-blue-700"> support@carplatescanner.com  </Link>
            and let us know how we can help you
           achieve your goals. At Car Plate Scanner, your satisfaction is our
           priority.

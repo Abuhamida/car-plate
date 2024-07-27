@@ -2,3 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+input::file-selector-button {
+  background-image: linear-gradient(
+    to right,
+    #000000,
+    #79281b,
+    #000000 100%,
+    #79281b 200%
+  );
+  cursor:pointer;
+  background-position-x: 0%;
+  background-size: 200%;
+  border: 0;
+  border-radius: 8px;
+  color: #fff;
+  padding: 1rem 1.25rem;
+  text-shadow: 0 1px 1px #333;
+  transition: all 0.25s;
+}
+input::file-selector-button:hover {
+  background-position-x: 100%;
+  transform: scale(1.1);
+}

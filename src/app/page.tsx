@@ -23,8 +23,8 @@ export default function Home() {
             transition={{ duration: 1, delay: 0.6 }}
             className="text-5xl text-black"
           >
-            welcome to our website{" "}
-            <span className="text-[#722d23] font-bold font-sans">VELOX</span>{" "}
+            welcome to our website
+            <span className="text-[#722d23] font-bold font-sans">VELOX</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, x: -300 }}
@@ -36,11 +36,11 @@ export default function Home() {
           </motion.p>
           <motion.div
             initial={{ opacity: 0, x: -300 }}
-            animate={{ opacity: 1, x: 1 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 1 }}
             className="bg-[#722d23] px-6 py-3 rounded-full text-3xl text-white hover:bg-white hover:text-[#722d23] cursor-pointer transition-colors duration-700 ease-in-out"
           >
-            <Link href={"/"}>let&apos;s try</Link>
+            <Link href={"/plate"}>let&apos;s try</Link>
           </motion.div>
         </div>
       </motion.div>
@@ -57,7 +57,7 @@ export default function Home() {
           </p>
 
           <div className=" relative">
-            <motion.ul className="pt-2 pl-6  flex flex-col justify-center items-start gap-3 leading-8 w-3/5">
+            <motion.ul className="pt-2 pl-6  flex flex-col justify-center items-start gap-3 leading-8 w-7/12">
               <motion.li
                 initial={{ opacity: 0, x: -200 }}
                 whileInView={{ opacity: 1, x: 1 }}
@@ -65,7 +65,7 @@ export default function Home() {
                 transition={{ duration: 0.8, ease: "linear" }}
               >
                 <span className=" font-bold">
-                  Effortless Car Plate Recognition:{" "}
+                  Effortless Car Plate Recognition: &nbsp;
                 </span>
                 Simply upload an image, and let our sophisticated OCR system do
                 the rest. Within moments, you&apos;ll have the car plate number at
@@ -78,8 +78,8 @@ export default function Home() {
                 transition={{ duration: 0.8, delay: 0.3, ease: "linear" }}
               >
                 <span className=" font-bold">
-                  Enhanced Security Solutions:{" "}
-                </span>{" "}
+                  Enhanced Security Solutions:&nbsp;
+                </span>
                 Our technology is ideal for enhancing security in various
                 applications, from gated communities to corporate parking lots.
                 Know who&apos;s coming and going with precision.
@@ -90,7 +90,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.6, ease: "linear" }}
               >
-                <span className=" font-bold">Parking Management: </span>{" "}
+                <span className=" font-bold">Parking Management:&nbsp;</span>
                 Streamline parking operations with automatic car plate
                 detection. Our system ensures efficient and accurate vehicle
                 tracking, reducing manual errors and saving time.
@@ -104,7 +104,7 @@ export default function Home() {
               className="h-[400px] absolute top-0 -z-10 bg-center bg-cover right-2 w-5/12 rounded-2xl bg-no-repeat flex flex-col items-start justify-center px-20"
               style={{
                 backgroundImage:
-                  "url('/images/license-plate-recognition-system-500x500.png')",
+                  "url('/images/b.png')",
               }}
             ></motion.div>
           </div>

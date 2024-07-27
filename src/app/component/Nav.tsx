@@ -14,7 +14,7 @@ export default function Nav() {
   const [navState, setNavState] = useState(false);
 
   return (
-    <div className="flex flex-col justify-center items-center lg:px-24 py-2 min-h-24 border-b-2 border-black w-full px-10 fixed top-0 text-black bg-white z-50">
+    <div className="flex flex-col justify-center items-center lg:px-24 py-2 min-h-20 md:min-h-[5.5rem]  lg:min-h-24 border-b-2 border-black w-full px-10 fixed top-0 text-black bg-white z-50">
       <motion.div
         className="absolute top-7 md:left-20 left-2"
         initial={{ opacity: 0, y: 50 }}
@@ -27,7 +27,7 @@ export default function Nav() {
             width={400}
             height={400}
             alt="vradar"
-            className="w-36"
+            className=" w-28 md:w-32 lg:w-36"
           />
         </Link>
       </motion.div>
@@ -51,7 +51,7 @@ export default function Nav() {
         </svg>
       </label> */}
 
-      <div className="text-5xl absolute top-7 right-2 md:hidden transition-transform ease-in duration-700">
+      <div className=" text-3xl md:text-4xl lg:text-5xl absolute top-7 right-2 md:right-16 lg:hidden transition-transform ease-in duration-700">
         {navState ? (
           <IoMdClose onClick={() => setNavState(!navState)} />
         ) : (
@@ -65,7 +65,7 @@ export default function Nav() {
         transition={{ duration: 0.5 }}
         className={`${
           navState ? "flex" : "hidden"
-        } md:hidden h-screen overflow-hidden items-start flex-col justify-center w-full`}
+        } lg:hidden h-screen overflow-hidden items-start flex-col justify-center w-full`}
       >
         <ul className="flex flex-col gap-32 font-bold font-sans text-2xl w-full">
           {navItems.map((item, index) => (
@@ -82,7 +82,7 @@ export default function Nav() {
         </ul>
       </motion.div>
 
-      <div className="hidden h-20 md:flex md:flex-col justify-center items-center w-full">
+      <div className="hidden h-20 lg:flex md:flex-col justify-center items-center w-full">
         <ul className="flex gap-20 font-bold font-sans text-2xl ">
           {navItems.map((item, index) => (
             <motion.li
